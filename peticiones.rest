@@ -1,0 +1,73 @@
+// LA IMAGEN ESTA EN BLOB POR ESO RETORNA COMO UNA CADENA DE BYTES
+//La url para cada uno de los modelos parte con el prefijo /api
+
+### get autor ###
+
+GET http://localhost:3000/api/autores
+
+### POST autor ###
+POST http://localhost:3000/api/autores
+Content-Type: application/json
+
+{
+  "nombre": "el cachahua",
+  "email": "sda@gmail.com",
+  "imagen": "dsgasfdgh"}
+
+
+### PUT autor ###
+PUT http://localhost:3000/api/autores/1
+Content-Type: application/json
+
+{
+  "nombre": "Juan carlos Barrera ",
+  "email": "bjuancarlos886@gmail.com",
+  "imagen": "Soy una imagen en base 64"}
+
+
+### DELETE autor ###
+DELETE http://localhost:3000/api/autores/4
+
+
+
+
+### get posts ###
+// post recuperado debería ir acompañado de todos los datos del autor de este y no solo del identificador que lo define
+  GET http://localhost:3000/api/posts
+
+### GET POST BY AUTOR ###
+//recuperar los diferentes posts escritos por un autor en concreto
+
+  GET http://localhost:3000/api/posts/2
+
+
+
+### POST posts ###
+POST http://localhost:3000/api/posts
+Content-Type: application/json
+
+{
+  "titulo": "el hijo del diablo ",
+  "descripcion": "sin descripcion aparente ",
+   "fecha": "2018-11-02",
+   "categoria": "comedia",
+    "Autores_idAutores": "2"
+}
+
+###update posts ###
+PUT http://localhost:3000/api/posts/7
+Content-Type: application/json
+
+{
+  "titulo": "el hijo de la luna",
+  "descripcion": "sin descripcion aparente ",
+   "fecha": "2018-11-02",
+   "categoria": "comedia",
+    "Autores_idAutores": "3"
+}
+### DELETE posts ###
+DELETE http://localhost:3000/api/posts/1
+
+
+
+
